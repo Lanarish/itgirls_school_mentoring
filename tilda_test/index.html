@@ -87,7 +87,7 @@
         });
       </script> -->
 
-      <script>
+      <!-- <script>
         document.addEventListener('DOMContentLoaded', function() {
              let cart = document.querySelectorAll('.t706');
     
@@ -104,8 +104,34 @@
                             });
                      },500);
                 });
+      </script> -->
+      <script>
+        $( document ).ready(function(){
+            $('.tn-atom').click(function(e) {
+             
+              
+                setTimeout(function() {
+                        let cart = document.querySelectorAll('.t706');
+                       
+                        const inputsArray = Array.from(document.querySelectorAll('input[type="radio"]'));
+                         console.log(inputsArray);
+                    
+                         inputsArray.forEach((input) => {
+                             let productName = document.querySelector('.t706__product-title t-descr t-descr_sm');
+                             console.log(productName);
+                            const inputValue = input.getAttribute('value');
+                            const isVisible = (productName === 'Я с командой. Полная оплата' && inputValue !== 'custom.payform') 
+                                    || (productName === 'Я с командой. Рассрочка от банка' && inputValue === 'custom.payform') 
+                                    || (buttonName === 'Я с командой. Оплата 1 месяца' && inputValue !== 'custom.payform');
+                                
+                            input.style.display = isVisible ? 'block' : 'none';
+                            });
+                    
+                    
+                     },500);
+            });
+                });
       </script>
-
 
 <!-- <script>
     const form = document.getElementById('form');
@@ -168,6 +194,33 @@
         }
         });
     </script> -->
-
+    // <script>
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   const buttons = document.querySelectorAll("div.t396__elem.tn-elem a.tn-atom");
+      //   buttons.forEach((button) => {
+      //     button.addEventListener('click', () => {
+      //       const buttonName = button.getAttribute('href');
+      //       const inputsArray = Array.from(document.querySelectorAll('input[type="radio"]'));
+      //       inputsArray.forEach((input) => {
+      //         const inputValue = input.getAttribute('value');
+      //         const labels = document.querySelectorAll('.t-radio__wrapper-payment label');
+      //         labels.forEach((label) => {
+      //           const labelInnerText = label.innerText;
+      //           if (
+      //             (buttonName === '#order: Я с командой. Полная оплата=181500' || buttonName === '#order:Я с командой. Оплата 1 месяца=16500') &&
+      //             labelInnerText !== 'Банковская рассрочка'
+      //           ) {
+      //             label.style.display = 'block';
+      //           } else if (buttonName === '#order:Я с командой. Рассрочка от банка=181500' && labelInnerText === 'Банковская рассрочка') {
+      //             label.style.display = 'block';
+      //           } else {
+      //               label.style.display = 'none';
+      //           }
+      //         });
+      //       });
+      //     });
+      //   });
+      // });
+      // </script>
 </body>
 </html>
