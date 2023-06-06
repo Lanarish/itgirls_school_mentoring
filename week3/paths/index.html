@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Фотография лежит в той же папке</h2>
+  <img src="cat.jpg" alt="kitty" /> - верный путь
+  <img src="/cat.jpg" alt="kitty" /> - верный путь
+  <img src="./cat.jpg" alt="kitty" /> - устаревший путь
+  <img src="http://127.0.0.1:5500/cat.jpg" alt="kitty" />
+  <img src="https://valeryshel.github.io/itgirlschool-mentor/cat.jpg" alt="kitty" />
+  <h2>Фотография лежит в папке assets</h2>
+  <img src="assets/cat.jpg" alt="kitty" /> - верный путь
+  <img src="/assets/cat.jpg" alt="kitty" />
+  <img src="./assets/cat.jpg" alt="kitty" /> - устаревший путь
+  <img src="http://127.0.0.1:5500/assets/cat.jpg" alt="kitty" />
+  <img src="https://valeryshel.github.io/itgirlschool-mentor/assets/cat.jpg" alt="kitty" />
+  <h2>Фотография лежит в папке img</h2>
+  <img src="assets/img/cat.jpg" alt="kitty" /> - верный путь
+  <img src="/assets/img/cat.jpg" alt="kitty" />
+  <img src="./assets/img/cat.jpg" alt="kitty" /> - устаревший путь
+  <img src="http://127.0.0.1:5500/assets/img/cat.jpg" alt="kitty" />
+  <img src="https://valeryshel.github.io/itgirlschool-mentor/assets/img/cat.jpg" alt="kitty" />;
+  <p style="padding-bottom: 400px">
+    А что если мы не спускаемся, а поднимаемся?
+    <br />
+    <a href="./dir1/folder1/folder1.html">Проверим?</a>
+    <a href="/dir1/folder1/folder1.html">Проверим?</a>
+    <a href="dir1/folder1/folder1.html">Проверим?</a>
+  </p>
+</body>
+</html>
